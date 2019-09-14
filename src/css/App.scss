@@ -1,0 +1,229 @@
+$primary-color: rgb(209, 55, 44);
+
+.App {
+    .navbar {
+        color: white;
+        padding: 12px;
+        background-color: black;
+        .navbar-brand {
+            img {
+                width: 150px;
+            }
+        }
+        img {
+            width: 30px;
+            cursor: pointer;
+        }
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background: rgb(17, 17, 17);
+        }
+        
+        /* The progress bar (scroll indicator) */
+        .progress-bar {
+        height: 4px;
+        background: $primary-color;
+        width: 0%;
+        }
+    }
+    
+    .banner {
+        position: relative;
+        max-height: 1000px;
+        h1 {
+            font-size: 80px;
+            color: white;
+            animation: slideRight 0.5s ease-out;
+            filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+        }
+        img {
+            width: 400px;
+        }
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            padding: 40px 20px;
+            .btn {
+                border-radius: 0;
+                &:focus {
+                    outline: none;
+                  }
+            }
+            .directory {
+                border-radius: 5px;
+                padding: 30px 100px 30px 0px;
+                background-color: black;
+                width: 90%;
+                position: absolute;
+                display: none;
+                ul li {
+                    a {
+                        color: rgb(219, 58, 18);
+                    }
+                    list-style-type: none;
+                    font-size: x-large;
+                    font-weight: bolder;
+                }
+            }
+        }
+        .right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 20px;
+            .directory {
+                animation: slideLeft 0.5s;
+                border-radius: 5px;
+                padding: 30px 100px 30px 0px;
+                background-color: black;
+                width: 400px;
+                filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));
+                ul li {
+                    a {
+                        color: $primary-color;
+                    }
+                    list-style-type: none;
+                    font-size: x-large;
+                    font-weight: bolder;
+                }
+            }
+        }
+        p, h4 {
+            color: white;
+        }
+        height: 90vh;
+        padding: 200px 50px;
+        background-image: url("https://wallpapercave.com/wp/wp2757874.gif");
+        background-position: center;
+        @keyframes slideLeft {
+            from {margin-right: -100px; opacity: 0.3;}
+            to {margin-right: 0px; opacity: 1;}
+        }
+        @keyframes slideRight {
+            from {margin-left: -100px; opacity: 0.3; color: black}
+            to {margin-left: 0px; opacity: 1; color: white;}
+        }
+    }
+    @media only screen and (max-width: 640px) {
+        .banner {
+            background-size: cover;
+            h1 {
+                font-size: 60px;
+            }
+        }
+    }
+    @media only screen and (max-width: 1105px) {
+        .banner {
+            .right {
+                display: none;
+            }
+        }
+    }
+    @media only screen and (min-width: 1105px) {
+        .banner {
+            .btn-primary {
+                display: none;
+            }
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        .banner {
+            padding: 200px 20px;
+            h1 {
+                font-size: 50px;
+            }
+        }
+    }
+    .arrow-down {
+        width: 100px;
+        display: block;
+        margin: auto;
+    }
+}
+.Content {
+    background-color: black;
+    padding: 20px;
+    padding: 20px 30px;
+    hr {
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.466);
+        width: 300px;
+    }
+    .container {
+        width: 100%;
+        max-width: 1400px;
+        input {
+            &:focus {
+                outline: none;
+            }
+            width: 100%;
+            display: block;
+            margin: auto;
+            padding: 7px;
+            font-size: x-large;
+            background-color: transparent;
+            color: white;
+            border: 0;
+            border-bottom: 1px solid white;
+            margin-bottom: 50px;
+        }
+        .footer {
+            color: white;
+            text-align: center;
+            .btn {
+                font-size: x-large;
+                border-radius: 0;
+            }
+            .btn, img {
+                margin: auto;
+                width: 100%;
+                max-width: 800px; 
+                margin-top: 5px;
+                display: block;
+            }
+        }
+    }
+    
+}
+.Showcase {
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+    padding: 20px;
+    background-color: rgb(23, 23, 31);
+    position: relative;
+    .links {
+        position: absolute;
+        bottom: 0;
+        button {
+            padding: 10px 15px;
+            font-size: large;
+            background-color: $primary-color;
+            color: white;
+            border: 0;
+            &:hover {
+                background-color: rgb(121, 16, 16);
+            }
+            img {
+                width: 20px;
+            }
+        }
+    }
+    @media only screen and (max-width: 570px) {
+        .links {
+            margin-top: 5px;
+            position: static;
+            button {
+                padding: 8px 12px;
+            }
+        }
+    }
+    p {
+        font-size: x-large;
+    }
+    img {
+        width: 100%;
+    }
+}

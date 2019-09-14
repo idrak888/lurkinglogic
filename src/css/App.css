@@ -1,0 +1,300 @@
+.App .navbar {
+  color: white;
+  padding: 12px;
+  background-color: black;
+  /* The progress bar (scroll indicator) */
+}
+
+.App .navbar .navbar-brand img {
+  width: 150px;
+}
+
+.App .navbar img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.App .navbar .progress-container {
+  width: 100%;
+  height: 4px;
+  background: #111111;
+}
+
+.App .navbar .progress-bar {
+  height: 4px;
+  background: #d1372c;
+  width: 0%;
+}
+
+.App .banner {
+  position: relative;
+  max-height: 1000px;
+  height: 90vh;
+  padding: 200px 50px;
+  background-image: url("https://wallpapercave.com/wp/wp2757874.gif");
+  background-position: center;
+}
+
+.App .banner h1 {
+  font-size: 80px;
+  color: white;
+  -webkit-animation: slideRight 0.5s ease-out;
+          animation: slideRight 0.5s ease-out;
+  -webkit-filter: drop-shadow(0 0 0.75rem black);
+          filter: drop-shadow(0 0 0.75rem black);
+}
+
+.App .banner img {
+  width: 400px;
+}
+
+.App .banner .bottom {
+  position: absolute;
+  bottom: 0;
+  padding: 40px 20px;
+}
+
+.App .banner .bottom .btn {
+  border-radius: 0;
+}
+
+.App .banner .bottom .btn:focus {
+  outline: none;
+}
+
+.App .banner .bottom .directory {
+  border-radius: 5px;
+  padding: 30px 100px 30px 0px;
+  background-color: black;
+  width: 90%;
+  position: absolute;
+  display: none;
+}
+
+.App .banner .bottom .directory ul li {
+  list-style-type: none;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.App .banner .bottom .directory ul li a {
+  color: #db3a12;
+}
+
+.App .banner .right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.App .banner .right .directory {
+  -webkit-animation: slideLeft 0.5s;
+          animation: slideLeft 0.5s;
+  border-radius: 5px;
+  padding: 30px 100px 30px 0px;
+  background-color: black;
+  width: 400px;
+  -webkit-filter: drop-shadow(0 0 0.5rem black);
+          filter: drop-shadow(0 0 0.5rem black);
+}
+
+.App .banner .right .directory ul li {
+  list-style-type: none;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.App .banner .right .directory ul li a {
+  color: #d1372c;
+}
+
+.App .banner p, .App .banner h4 {
+  color: white;
+}
+
+@-webkit-keyframes slideLeft {
+  from {
+    margin-right: -100px;
+    opacity: 0.3;
+  }
+  to {
+    margin-right: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    margin-right: -100px;
+    opacity: 0.3;
+  }
+  to {
+    margin-right: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideRight {
+  from {
+    margin-left: -100px;
+    opacity: 0.3;
+    color: black;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+    color: white;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    margin-left: -100px;
+    opacity: 0.3;
+    color: black;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .App .banner {
+    background-size: cover;
+  }
+  .App .banner h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 1105px) {
+  .App .banner .right {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1105px) {
+  .App .banner .btn-primary {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .App .banner {
+    padding: 200px 20px;
+  }
+  .App .banner h1 {
+    font-size: 50px;
+  }
+}
+
+.App .arrow-down {
+  width: 100px;
+  display: block;
+  margin: auto;
+}
+
+.Content {
+  background-color: black;
+  padding: 20px;
+  padding: 20px 30px;
+}
+
+.Content hr {
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.466);
+  width: 300px;
+}
+
+.Content .container {
+  width: 100%;
+  max-width: 1400px;
+}
+
+.Content .container input {
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding: 7px;
+  font-size: x-large;
+  background-color: transparent;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid white;
+  margin-bottom: 50px;
+}
+
+.Content .container input:focus {
+  outline: none;
+}
+
+.Content .container .footer {
+  color: white;
+  text-align: center;
+}
+
+.Content .container .footer .btn {
+  font-size: x-large;
+  border-radius: 0;
+}
+
+.Content .container .footer .btn, .Content .container .footer img {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 5px;
+  display: block;
+}
+
+.Showcase {
+  width: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  color: white;
+  padding: 20px;
+  background-color: #17171f;
+  position: relative;
+}
+
+.Showcase .links {
+  position: absolute;
+  bottom: 0;
+}
+
+.Showcase .links button {
+  padding: 10px 15px;
+  font-size: large;
+  background-color: #d1372c;
+  color: white;
+  border: 0;
+}
+
+.Showcase .links button:hover {
+  background-color: #791010;
+}
+
+.Showcase .links button img {
+  width: 20px;
+}
+
+@media only screen and (max-width: 570px) {
+  .Showcase .links {
+    margin-top: 5px;
+    position: static;
+  }
+  .Showcase .links button {
+    padding: 8px 12px;
+  }
+}
+
+.Showcase p {
+  font-size: x-large;
+}
+
+.Showcase img {
+  width: 100%;
+}
+/*# sourceMappingURL=App.css.map */
